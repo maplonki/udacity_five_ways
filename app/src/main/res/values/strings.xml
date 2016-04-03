@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Five Ways To\nCook</string>
+    <string name="activity_main_hint_search">Chicken, pasta, eggs, beef…</string>
+    <string name="activity_main_title">5 Ways\nto Cook With:</string>
+    <string name="search">Search</string>
+    <string name="recipe_image">Recipe Image</string>
+    <string name="title_dialog_loading">Loading Recipes</string>
+    <string name="description_dialog_loading">Please wait while we get your recipes</string>
+    <string name="description_toast_detail">Tap on the image to see the full recipe!</string>
+    <string name="error_main_empty_field">Please enter a search term</string>
+</resources>

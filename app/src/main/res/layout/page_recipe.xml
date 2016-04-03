@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/page_recipe_iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/recipe_image"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/img_placeholder" />
+
+    <TextView
+        android:id="@+id/page_recipe_tv_title"
+        android:background="@drawable/bg_results_translucent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_edittext"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/size_text_title"
+        android:textStyle="bold"
+        tools:text="Chicken Noodles" />
+
+</RelativeLayout>
