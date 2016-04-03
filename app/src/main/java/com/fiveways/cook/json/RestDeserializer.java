@@ -13,6 +13,27 @@ import java.util.List;
 
 /**
  * Created by hugo on 4/2/16.
+ *
+ * This class handles parsing a custom JSON object for the response coming
+ * from the api (api/search)
+ *
+ * Which is
+ * {
+ *     "hits":[
+ *          {
+ *              "recipe": {
+ *                  "label":""
+ *                      ...
+ *              }
+ *          },
+ *          {
+ *              "recipe": {
+ *                  "label":""
+ *                      ...
+ *              }
+ *          }
+ *     ]
+ * }
  */
 public class RestDeserializer implements JsonDeserializer<List<RecipeModel>> {
     @Override

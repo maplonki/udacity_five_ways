@@ -15,18 +15,41 @@ import java.util.List;
 
 /**
  * Created by hugo on 4/2/16.
+ * <p/>
+ * This is the adapter that shows each recipe
+ * in a "single page"
  */
 public class RecipePagerAdapter extends PagerAdapter {
 
-
+    /**
+     * This interface will be called whenever a user clicks on a
+     * recipe image.
+     * <p/>
+     * It will call the activity containing this adapter and will
+     * handle the URL
+     */
     public interface OnRecipeDetailListener {
         void onRecipeDetail(String detailUri);
     }
 
+    /**
+     * The application context
+     */
     private Context mContext;
+
+    /**
+     * The list of recipes
+     */
     private List<RecipeModel> mRecipeList;
+
+    /**
+     * The callback for the ResultsActivity
+     */
     private OnRecipeDetailListener recipeListener;
 
+    /**
+     * Click Listener, executed when clicking on an image
+     */
     private View.OnClickListener recipeClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -38,6 +61,13 @@ public class RecipePagerAdapter extends PagerAdapter {
         }
     };
 
+    /**
+     * Constructs a RecipePagerAdapter with a context, the list of recipes and a callback
+     *
+     * @param mContext       the application context
+     * @param mRecipeList    the recipe list
+     * @param recipeListener the recipe callback
+     */
     public RecipePagerAdapter(Context mContext, List<RecipeModel> mRecipeList, OnRecipeDetailListener recipeListener) {
         this.mContext = mContext;
         this.mRecipeList = mRecipeList;

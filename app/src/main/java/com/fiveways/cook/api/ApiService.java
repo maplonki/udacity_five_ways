@@ -11,6 +11,9 @@ import retrofit2.http.QueryMap;
 
 /**
  * Created by hugo on 4/2/16.
+ *
+ * This class defines all of the available paths to
+ * from the Recipes API
  */
 public interface ApiService {
     @GET("search")

@@ -5,11 +5,27 @@ import android.os.Parcelable;
 
 /**
  * Created by hugo on 4/2/16.
+ * <p/>
+ * This class represents a single recipe coming
+ * from the API.
  */
-public class RecipeModel implements Parcelable{
+public class RecipeModel implements Parcelable {
 
+    /**
+     * This is the name of the recipe
+     */
     private String label;
+
+    /**
+     * This is the URL of the image
+     * from the recipe
+     */
     private String image;
+
+    /**
+     * This is the source URL from the
+     * recipe.
+     */
     private String url;
 
     protected RecipeModel(Parcel in) {

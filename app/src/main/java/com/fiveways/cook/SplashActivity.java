@@ -9,12 +9,17 @@ import com.fiveways.cook.activities.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
+    /**
+     * Milliseconds for presenting the Splash Image
+     */
     private static final long SPLASH_TIMEOUT = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        //We show the splash image for 1.5 seconds
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

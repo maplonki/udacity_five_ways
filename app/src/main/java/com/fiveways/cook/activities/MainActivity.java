@@ -3,6 +3,7 @@ package com.fiveways.cook.activities;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,8 +26,14 @@ import retrofit2.Response;
 
 /**
  * Created by hugo on 4/2/16.
+ * <p/>
+ * This is the main activity for searching
+ * recipes.
+ * <p/>
+ * It makes the requests for the Recipe API and then
+ * opens the {@link ResultsActivity}
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     private EditText mSearchField;
     private ProgressDialog mProgressDialog;
@@ -41,11 +48,14 @@ public class MainActivity extends BaseActivity {
 
     public void onSearchButton(View view) {
 
-
+        //We validate that the user enterd a search term
         if (!ValidationUtils.emptyFields(mSearchField)) {
             mProgressDialog = ProgressDialog.show(this, getString(R.string.title_dialog_loading), getString(R.string.description_dialog_loading));
 
+            //We get the Retrofit class to make the request
             ApiService service = CookApp.retrofit.create(ApiService.class);
+
+            //We append the credentials and params in a hash map form
             Map<String, String> requestParams = new HashMap<>();
             requestParams.put("q", mSearchField.getText().toString());
             requestParams.put("to", "5");
